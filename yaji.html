@@ -7,9 +7,26 @@
   <meta name="theme-color" content="#a83e32" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <title>诗趣雅集 · 每日一诗</title>
+  <style>
+    :root { color: #20231f; background: #f7f4ec; font-family: "Noto Serif SC", serif; }
+    body { margin: 0; }
+    .yaji-loading, .yaji-load-error {
+      min-height: 100vh; min-height: 100dvh; display: grid; place-content: center;
+      gap: 14px; padding: 28px; text-align: center;
+      background: radial-gradient(rgba(48,50,44,.04) .7px, transparent .7px) #f7f4ec;
+      background-size: 8px 8px;
+    }
+    .yaji-loading span, .yaji-load-error > span {
+      width: 48px; height: 53px; display: grid; place-items: center; margin: auto;
+      color: #fffaf0; background: #a83e32; font-size: 26px;
+    }
+    .yaji-loading p, .yaji-load-error p { margin: 0; color: #77786f; font-size: 13px; }
+    .yaji-load-error h1 { margin: 8px 0 0; font-size: 27px; font-weight: 400; }
+    .yaji-load-error button { min-height: 40px; margin: 8px auto 0; padding: 0 18px; border: 0; background: #20231f; color: white; }
+  </style>
 </head>
 <body>
-  <div id="yaji-app"></div>
+  <div id="yaji-app"><main class="yaji-loading"><span>诗</span><p>正在展开诗趣雅集…</p></main></div>
   <script type="module" src="/src/yaji/main.js"></script>
 </body>
 </html>
